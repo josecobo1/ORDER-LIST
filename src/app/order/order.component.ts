@@ -44,7 +44,6 @@ export class OrderComponent implements OnInit {
 
   ngOnInit(): void {
 
-    //this.productService.read$().subscribe(products => this.products = products);
     this.products = this.fireService.products$();
 
     this.formGroup = this.fb.group({
@@ -61,7 +60,6 @@ export class OrderComponent implements OnInit {
     this.orderProducts.splice(i, 1);
   }
 
-  // hay qeu poner async porque la función es asincrona en la parte de usar el servicio para enviar el objeto al server
   async submit(){
 
     if(this.formGroup.invalid) {
