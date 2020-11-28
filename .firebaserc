@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "net-mind": {
+      "hosting": {
+        "orders": [
+          "net-mind"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "net-mind"
+  }
+}

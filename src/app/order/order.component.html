@@ -10,9 +10,9 @@
 </form>
 
 <mat-grid-list class="botonera" cols="3" rowHeight="3:1">
-  <mat-grid-tile *ngFor="let product of products">
+  <mat-grid-tile *ngFor='let product of products | async'>
     <button mat-raised-button color="accent" (click)="addToOrder(product)">
-      {{ product }}
+      {{ product.product }}
     </button>
   </mat-grid-tile>
 </mat-grid-list>
@@ -30,7 +30,7 @@
 
 <mat-chip-list id="chipList">
 <mat-chip *ngFor="let product of orderProducts; let i=index" [removable]='removable' [selectable]='false' (removed)="removeFromOrder(i)">
-{{ product }}
+{{ product.product }}
 <mat-icon matChipRemove *ngIf='removable'>cancel</mat-icon>
 </mat-chip></mat-chip-list>
 
